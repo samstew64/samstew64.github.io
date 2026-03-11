@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+
+  <script>
+    (function () {
+      const savedLang = localStorage.getItem("preferredLang");
+
+      if (savedLang === "jp" || savedLang === "en") {
+        window.location.replace("/" + savedLang + "/");
+        return;
+      }
+
+      const browserLang = navigator.language || navigator.userLanguage;
+
+      if (browserLang && browserLang.startsWith("ja")) {
+        localStorage.setItem("preferredLang", "jp");
+        window.location.replace("/jp/");
+      } else {
+        localStorage.setItem("preferredLang", "en");
+        window.location.replace("/en/");
+      }
+    })();
+  </script>
+</head>
+<body>
+  <h1>404 – Page Not Found</h1>
+  <p>You’ll be redirected to the appropriate language site.</p>
+
+  <noscript>
+    <p>
+      <a href="/en/">English</a> |
+      <a href="/jp/">日本語</a>
+    </p>
+  </noscript>
+</body>
+</html>

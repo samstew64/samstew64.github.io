@@ -1,0 +1,176 @@
+/* ================================
+   HOME PAGE HERO ONLY
+================================ */
+
+.home-hero {
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================================
+   BACKGROUND SLIDESHOW
+================================ */
+
+.home-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.home-hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  animation: homeHeroSlideshow var(--slideshow-duration) infinite;
+}
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(11, 13, 16, 0.85),
+    rgba(11, 13, 16, 0.6)
+  );
+  z-index: 1;
+}
+
+@keyframes homeHeroSlideshow {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  30%  { opacity: 1; }
+  40%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ================================
+   HERO CONTENT
+================================ */
+
+.home-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.home-hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+.home-hero-accent {
+  color: var(--accent);
+}
+
+.home-hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* ================================
+   HERO BUTTONS
+================================ */
+
+.home-hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.home-btn.primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.home-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.home-btn.ghost {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.home-btn.ghost:hover {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+/* ================================
+   HOME SECTIONS
+================================ */
+
+.home-section {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+}
+
+.home-skill-block {
+  margin-bottom: 1.5rem;
+}
+
+.home-skill-block h3 {
+  color: var(--accent-soft);
+  margin-bottom: 0.25rem;
+}
+
+.home-skill-block p {
+  color: var(--muted);
+}
+
+/* ================================
+   DEMO REEL VIDEO
+================================ */
+
+.reel-video-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.reel-video-wrapper video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+  .home-hero {
+    min-height: 65vh;
+  }
+
+  .home-hero-subtitle {
+    font-size: 1rem;
+  }
+}

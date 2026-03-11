@@ -1,0 +1,24 @@
+{% assign t = site.data.i18n[page.lang] %}
+{% assign current_year = site.time | date: "%Y" %}
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">
+      {{ current_year }}
+      {{ t.footer.name }}
+    </p>
+
+    <div class="footer-links">
+      {% if site.author.github %}
+        <a href="https://github.com/{{ site.author.github }}" target="_blank">
+          GitHub
+        </a>
+      {% endif %}
+      {% if site.author.linkedin %}
+        <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank">
+          LinkedIn
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</footer>

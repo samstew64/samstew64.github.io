@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Global styles -->
+  <link rel="preload" href="/assets/css/style.css" as="style">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Page-specific styles -->
+  {% if page.custom_css %}
+  <link rel="stylesheet" href="/assets/css/{{ page.custom_css }}.css">
+  {% endif %}
+</head>
+<script src="/assets/js/hero-slideshow.js"></script>
+<body>
+  {% include header.html %}
+
+  <main class="container page-content">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>

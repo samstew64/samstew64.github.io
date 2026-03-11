@@ -1,0 +1,39 @@
+{% assign t = site.data.i18n[page.lang] %}
+<header class="site-header">
+  <div class="container">
+    <div class="branding">
+      <h1 class="site-title">{{ site.title }}</h1>
+    </div>
+
+    <nav>
+      <a href="/{{ page.lang }}/">{{ t.nav.home }}</a>
+      <a href="/{{ page.lang }}/projects/">{{ t.nav.projects }}</a>
+      <a href="/{{ page.lang }}/experience/">{{ t.nav.experience }}</a>
+      <a href="/{{ page.lang }}/about/">{{ t.nav.about }}</a>
+
+      {% if page.lang == "en" %}
+        <a class="lang-toggle"
+           href="{{ page.url | replace_first: '/en/', '/jp/' }}"
+           onclick="localStorage.setItem('preferredLang','jp')">
+
+          <img src="/assets/icons/flag-jp.svg"
+               alt="Japanese"
+               class="lang-flag">
+
+          日本語
+        </a>
+      {% else %}
+        <a class="lang-toggle"
+           href="{{ page.url | replace_first: '/jp/', '/en/' }}"
+           onclick="localStorage.setItem('preferredLang','en')">
+
+          <img src="/assets/icons/flag-us.svg"
+               alt="English"
+               class="lang-flag">
+
+          English
+        </a>
+      {% endif %}
+    </nav>
+  </div>
+</header>

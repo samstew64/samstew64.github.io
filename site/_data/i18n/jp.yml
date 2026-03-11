@@ -1,0 +1,12 @@
+lang_name: 日本語
+toggle_label: English
+
+nav:
+  home: ホーム
+  projects: プロジェクト
+  experience: 経歴
+  about: 自己紹介
+
+footer:
+  copyright_prefix: "©"
+  name: "Samuel Stewart"

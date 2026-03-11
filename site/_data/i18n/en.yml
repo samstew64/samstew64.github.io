@@ -1,0 +1,13 @@
+lang_name: English
+toggle_label: 日本語
+
+nav:
+  home: Home
+  reel: Reel
+  projects: Projects
+  experience: Experience
+  about: About
+
+footer:
+  copyright_prefix: "©"
+  name: "Samuel Stewart"

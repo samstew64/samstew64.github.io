@@ -1,0 +1,28 @@
+languages:
+  - C/C++
+  - GLSL
+  - Python
+  - GDScript
+  - Java
+
+engines:
+  - Unreal Engine
+  - Godot
+  - Custom C++ Engine
+
+technical art:
+  - Procedural modeling & texturing
+  - Rigging
+  - Animation
+
+tools:
+  - Blender
+  - Gimp
+  - CMake
+  - Perforce
+  - Git
+  - Rider
+  - VS Code
+
+other:
+  - Business-level Japanese

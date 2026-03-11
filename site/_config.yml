@@ -1,0 +1,30 @@
+title: Samuel Stewart
+description: >-
+  I am an aspiring game developer specializing in game programming and
+  game design.
+url: "https://samstew64.github.io"
+baseurl: ""
+
+languages: ["en", "jp"]
+default_lang: "en"
+
+author:
+  name: Samuel Stewart
+  github: samstew64
+  linkedin: samuel-stewart-791410386
+
+theme: null
+markdown: kramdown
+
+permalink: pretty
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
